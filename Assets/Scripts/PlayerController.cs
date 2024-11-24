@@ -10,45 +10,38 @@ public class PlayerController : MonoBehaviour
     private float jumpForce;
 
     [SerializeField]
-    private Text scoreText;
-    [SerializeField]
-    private Text highScoreText;
-
-    [SerializeField]
-    private Sprite neutralSprite, fallingSprite, risingSprite;
-
-    [SerializeField]
-    private AudioClip flapSound, scoreSound, impactSound;
+    private AudioClip jumpSound, scoreSound, impactSound;
 
     [SerializeField]
     private UnityEvent OnEndGame = new UnityEvent();
 
     private Rigidbody2D rb;
-    private SpriteRenderer spriteRenderer;
+    private Animator animator;
+    private bool onGround = false;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
 
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = neutralSprite;
-
-        GlobalVar.GetScore();
-        highScoreText.text = GlobalVar.highScore.ToString();
+        // GlobalVar.GetScore();
+        // highScoreText.text = GlobalVar.highScore.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && onGround)
         {
+            onGround = false;
+            animator.SetBool("jumping", true);
             rb.velocity = Vector2.zero;
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            AudioSource.PlayClipAtPoint(flapSound, Camera.main.transform.position);
+            AudioSource.PlayClipAtPoint(jumpSound, Camera.main.transform.position);
         }
 
-        Animate();
+        // Animate();
     }
 
     public void EnableGravity()
@@ -56,21 +49,15 @@ public class PlayerController : MonoBehaviour
         rb.gravityScale = 1;
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        PipeController pipe = collision.GetComponent<PipeController>();
-        GlobalVar.score += pipe.rewardPoints;
-        if(scoreText != null) scoreText.text = GlobalVar.score.ToString();
-        UpdateHighScore();
-        AudioSource.PlayClipAtPoint(scoreSound, Camera.main.transform.position);
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        UpdateHighScore();
-        EndGame();
+        onGround = true;
+        animator.SetBool("jumping", false);
+        // UpdateHighScore();
+        // EndGame();
     }
 
+    /* Legacy Methods
     private void UpdateHighScore()
     {
         if(GlobalVar.score > GlobalVar.highScore)
@@ -94,4 +81,5 @@ public class PlayerController : MonoBehaviour
         else if(rb.velocity.y < -0.3f) spriteRenderer.sprite = fallingSprite;
         else spriteRenderer.sprite = neutralSprite;
     }
+    */
 }
