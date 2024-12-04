@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: be908b472768c7340a69f465a752bfd1
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: flyer1
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 1746
+        width: 195
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7c9dd694a5caf7419ee1de31cd0d90a
+      internalID: -2112792178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flyer2
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 1746
+        width: 99
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5763c6f718662b42be01f88ac55eeec
+      internalID: 1906342057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flyer3
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 1746
+        width: 194
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6cd3ec37464ee4cab1d60ee1366585
+      internalID: 969242991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flyer4
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 1746
+        width: 114
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8954511856c30e499de30846a8db457
+      internalID: -1585677710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap9
+      rect:
+        serializedVersion: 2
+        x: 2275
+        y: 1753
+        width: 147
+        height: 115
+      alignment: 9
+      pivot: {x: 0.4758417, y: 0.052232295}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 076287a29ac8157458f5dc02918c3f69
+      internalID: 1509904729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shroom1
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 1232
+        width: 251
+        height: 178
+      alignment: 9
+      pivot: {x: 0.23273234, y: 0.010059828}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb7a7d9d2df065943a8f2be68accc5b7
+      internalID: -981019446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shroom2
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 1232
+        width: 252
+        height: 186
+      alignment: 9
+      pivot: {x: 0.23252529, y: 0.00880547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9713ec958bbc3a84c8f082f8ccfd75d2
+      internalID: -814543171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shroom3
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 1232
+        width: 227
+        height: 186
+      alignment: 9
+      pivot: {x: 0.18477358, y: 0.00880547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23fe9607ae6d8f443b927977ec338613
+      internalID: 2001116281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shroom4
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 1232
+        width: 251
+        height: 178
+      alignment: 9
+      pivot: {x: 0.23273264, y: 0.0046757045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f42c0493399ecac488d08320c8b6e3dc
+      internalID: 1528954868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap1
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 709
+        width: 147
+        height: 115
+      alignment: 9
+      pivot: {x: 0.47189933, y: 0.052375063}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 597e23997753f4342ab36f33852e6339
+      internalID: 227230020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap2
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 709
+        width: 148
+        height: 115
+      alignment: 9
+      pivot: {x: 0.47421718, y: 0.056203827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e34bdfe95d5294ba993ebc158732b5
+      internalID: -1290448944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap3
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 709
+        width: 146
+        height: 124
+      alignment: 9
+      pivot: {x: 0.47354835, y: 0.04580541}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a395cd085613e4844a939d86ade09a5b
+      internalID: -376140007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap4
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 709
+        width: 148
+        height: 180
+      alignment: 9
+      pivot: {x: 0.47139925, y: 0.034368895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ab88eb436faab24786809525d22091f
+      internalID: -50738379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap8
+      rect:
+        serializedVersion: 2
+        x: 1745
+        y: 188
+        width: 163
+        height: 139
+      alignment: 9
+      pivot: {x: 0.4781449, y: 0.034855027}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55784780be0144c42b839b89ee9c8cf7
+      internalID: -1924618322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap5
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 188
+        width: 147
+        height: 186
+      alignment: 9
+      pivot: {x: 0.4683788, y: 0.025173884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 579c69d35c8ac0246911fced5de22e85
+      internalID: 107895519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap6
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 188
+        width: 148
+        height: 186
+      alignment: 9
+      pivot: {x: 0.4745001, y: 0.02699173}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adc77c911f1edf54d9a3a336949ed88f
+      internalID: -1621808485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap7
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 188
+        width: 155
+        height: 171
+      alignment: 9
+      pivot: {x: 0.44714907, y: 0.027333042}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b60031c08ee3064281210df4f090b86
+      internalID: -509732832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      enemies_13: -1926461536
+      enemies_14: 2070489354
+      enemies_15: 650536812
+      enemies_16: 373561340
+      enemies_17: 1188115844
+      enemies_18: 1415693205
+      enemies_19: 148556285
+      enemies_20: 1141386465
+      enemies_21: -574712656
+      enemies_22: 2020017515
+      enemies_23: 761999676
+      enemies_24: 593520436
+      enemies_25: 1049508192
+      enemies_26: 106293743
+      enemies_27: -2026352727
+      enemies_28: -561705774
+      enemies_29: 1335909933
+      enemies_31: 1689305089
+      enemies_35: 664932051
+      flyer1: -2112792178
+      flyer2: 1906342057
+      flyer3: 969242991
+      flyer4: -1585677710
+      shroom1: -981019446
+      shroom2: -814543171
+      shroom3: 2001116281
+      shroom4: 1528954868
+      trap1: 227230020
+      trap2: -1290448944
+      trap3: -376140007
+      trap4: -50738379
+      trap5: 107895519
+      trap6: -1621808485
+      trap7: -509732832
+      trap8: -1924618322
+      trap9: 1509904729
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -8,16 +8,21 @@ public class PipeController : MonoBehaviour
     public int rewardPoints;
     [SerializeField]
     private float speed = 10f;
+    [SerializeField]
+    private float lifeTime = 10f;
+
+    private float speedMultiplier;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        speedMultiplier = GameManager.Instance.gameSpeed;
+        Destroy(gameObject, lifeTime);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
+        transform.Translate(Vector2.left * speed * speedMultiplier * Time.deltaTime);
     }
 }
