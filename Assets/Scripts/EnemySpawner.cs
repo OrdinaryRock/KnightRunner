@@ -26,12 +26,10 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemy()
     {
-
-        Vector2 spawnOffset = new Vector2();
         int enemyIndex = Random.Range(0, enemyPrefabs.Length);
 
-        Instantiate(enemyPrefabs[enemyIndex], (Vector2) transform.position + spawnOffset, transform.rotation);
+        Instantiate(enemyPrefabs[enemyIndex], (Vector2) transform.position, transform.rotation);
 
-        InvokeSpawnEnemy();
+        if(!GlobalVar.dead) InvokeSpawnEnemy();
     }
 }

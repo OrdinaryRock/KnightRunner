@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private bool onGround = false;
+    private bool attacking = false;
 
     // Start is called before the first frame update
     void Start()
@@ -32,13 +33,21 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0) && onGround)
+        if(Input.GetMouseButtonDown(0))
         {
-            onGround = false;
-            animator.SetBool("jumping", true);
-            rb.velocity = Vector2.zero;
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            AudioSource.PlayClipAtPoint(jumpSound, Camera.main.transform.position);
+            if(onGround)
+            {
+                onGround = false;
+                animator.SetBool("jumping", true);
+                rb.velocity = Vector2.zero;
+                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                AudioSource.PlayClipAtPoint(jumpSound, Camera.main.transform.position);
+            }
+            else
+            {
+                animator.SetTrigger("attack");
+                attacking = true;
+            }
         }
 
         // Animate();
@@ -51,10 +60,47 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        onGround = true;
-        animator.SetBool("jumping", false);
-        // UpdateHighScore();
-        // EndGame();
+        if(collision.gameObject.tag.Equals("Ground"))
+        {
+            onGround = true;
+            attacking = false;
+            animator.SetBool("jumping", false);
+            // UpdateHighScore();
+            // EndGame();
+        }
+        else if(collision.gameObject.tag.Equals("Enemy") && GlobalVar.dead == false)
+        {
+            if(collision.collider is CapsuleCollider2D) EndGame();
+            else if(collision.collider is CircleCollider2D)
+            {
+                rb.velocity = Vector2.zero;
+                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                Destroy(collision.gameObject);
+            }
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(attacking && collision.CompareTag("Enemy"))
+        {
+            Destroy(collision.gameObject);
+        }
+    }
+
+    private void EndGame()
+    {
+        onGround = false;
+        rb.velocity = Vector2.zero;
+        rb.gravityScale = 0f;
+        animator.SetBool("dead", true);
+        GlobalVar.dead = true;
+        GameManager.Instance.ActivateDeathScreen();
+    }
+
+    public void DestroyPlayer()
+    {
+        Destroy(gameObject);
     }
 
     /* Legacy Methods
@@ -67,13 +113,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void EndGame()
-    {
-        GlobalVar.SaveHighScore();
-        GlobalVar.score = 0;
-        AudioSource.PlayClipAtPoint(impactSound, Camera.main.transform.position);
-        OnEndGame.Invoke();
-    }
+    
 
     private void Animate()
     {

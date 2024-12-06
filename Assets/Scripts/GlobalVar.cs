@@ -7,6 +7,7 @@ public static class GlobalVar
 {
     public static int score;
     public static int highScore;
+    public static bool dead;
 
     public static void SaveHighScore()
     {

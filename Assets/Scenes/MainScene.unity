@@ -282,6 +282,89 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &288525319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 288525324}
+  - component: {fileID: 288525323}
+  - component: {fileID: 288525322}
+  m_Layer: 0
+  m_Name: BG_Death
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!23 &288525322
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288525319}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 170e2f15c67a93e458e16d6b95f06f5b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &288525323
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288525319}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &288525324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288525319}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.08}
+  m_LocalScale: {x: 17.952614, y: 10.297429, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &397778908
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,7 +595,7 @@ GameObject:
   - component: {fileID: 547177223}
   m_Layer: 0
   m_Name: GroundPlane
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -891,7 +974,7 @@ Transform:
   m_GameObject: {fileID: 749239365}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -3.04}
+  m_LocalPosition: {x: 0, y: 0, z: 3.7399998}
   m_LocalScale: {x: 17.952614, y: 10.297429, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -911,6 +994,7 @@ GameObject:
   - component: {fileID: 783638505}
   - component: {fileID: 783638507}
   - component: {fileID: 783638508}
+  - component: {fileID: 783638509}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1035,7 +1119,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1046,7 +1130,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 5
 --- !u!95 &783638507
 Animator:
   serializedVersion: 5
@@ -1080,13 +1164,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 742f00d88c6e2584fa66b6f1edf10688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 6
+  jumpForce: 15
   jumpSound: {fileID: 8300000, guid: b074c8f653e2a0049974a3526a990894, type: 3}
   scoreSound: {fileID: 0}
   impactSound: {fileID: 0}
   OnEndGame:
     m_PersistentCalls:
       m_Calls: []
+--- !u!58 &783638509
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783638502}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.07, y: 0.4}
+  serializedVersion: 2
+  m_Radius: 0.92
 --- !u!1 &832199657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,7 +1525,7 @@ Transform:
   m_GameObject: {fileID: 978888601}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 6.7799997}
   m_LocalScale: {x: 17.952614, y: 10.297429, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1605,7 +1724,7 @@ Transform:
   m_GameObject: {fileID: 1352907608}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.31}
+  m_LocalPosition: {x: 0, y: 0, z: 5.47}
   m_LocalScale: {x: 17.952614, y: 10.297429, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1725,7 +1844,7 @@ Transform:
   m_GameObject: {fileID: 1768117358}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -4.33}
+  m_LocalPosition: {x: 0, y: 0, z: 2.45}
   m_LocalScale: {x: 17.952614, y: 10.297429, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1764,6 +1883,7 @@ MonoBehaviour:
   player: {fileID: 783638502}
   scoreText: {fileID: 1256667097}
   highScoreText: {fileID: 397778910}
+  deathScreen: {fileID: 288525319}
 --- !u!4 &1894514835
 Transform:
   m_ObjectHideFlags: 0
@@ -2084,6 +2204,7 @@ SceneRoots:
   - {fileID: 1967667997}
   - {fileID: 143662529}
   - {fileID: 978888606}
+  - {fileID: 288525324}
   - {fileID: 1352907613}
   - {fileID: 749239370}
   - {fileID: 1768117363}

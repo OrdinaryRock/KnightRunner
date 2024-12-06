@@ -23,6 +23,7 @@ public class PipeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(GlobalVar.dead) Destroy(gameObject);
         transform.Translate(Vector2.left * speed * speedMultiplier * Time.deltaTime);
     }
 }
